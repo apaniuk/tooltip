@@ -1,0 +1,59 @@
+$color-white: #fff;
+$color-black: #000;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+$bg-color-default-tooltip: #343A3F;
+$bg-color-light-tooltip: #F7FAFB;
+$bg-color-error-tooltip: #DE3D44;
+$bg-color-warning-tooltip: #FEBF00;
+$bg-color-info-tooltip: #0281FF;
+$transition-duration: 250ms;
+
+.tooltip {
+	position: fixed;
+	box-shadow: $box-shadow;
+	padding: 6px 14px;
+	z-index: 1;
+	border-radius: 4px;
+	background-color: $bg-color-default-tooltip;
+	color: $color-white;
+	font-size: 12px;
+	pointer-events: none;
+	max-width: 200px;
+}
+
+.dark {
+	background-color: $bg-color-default-tooltip;
+}
+
+.light {
+	background-color: $bg-color-light-tooltip;
+	color: $color-black;
+}
+
+.error {
+	background-color: $bg-color-error-tooltip;
+}
+
+.warning {
+	background-color: $bg-color-warning-tooltip;
+}
+
+.info {
+	background-color: $bg-color-info-tooltip;
+}
+
+.tooltipEnter {
+	opacity: 0;
+}
+.tooltipEnterActive {
+	opacity: 1;
+	transform: translateX(0);
+	transition: opacity $transition-duration;
+}
+.tooltipExit {
+	opacity: 1;
+}
+.tooltipExitActive {
+	opacity: 0;
+	transition: opacity $transition-duration;
+}
